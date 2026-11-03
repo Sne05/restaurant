@@ -1,0 +1,1237 @@
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap');
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #f7f5ef;
+    color: #202820;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* Navbar */
+header {
+    width: 100%;
+    padding: 20px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fffdf8;
+    position: sticky;
+    top:-10px;
+}
+
+.logo h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    color: #26352b;
+}
+
+.logo span {
+    color: #c77a45;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: #596056;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #c77a45;
+}
+
+.nav-btn {
+    background-color: #526b4e;
+    color: white;
+    padding: 12px 20px;
+    font-size: 12px;
+    font-weight: 600;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+.nav-btn:hover {
+    background-color: #344b35;
+}
+/* Hero Section */
+.hero {
+    min-height: 600px;
+    background:
+        linear-gradient(
+            rgba(20, 30, 22, 0.65),
+            rgba(20, 30, 22, 0.65)
+        ),
+        url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1800&q=85");
+
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 80px 12%;
+    color: white;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.subtitle {
+    color: #c77a45;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.hero .subtitle {
+    color: #e9c4a4;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 65px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #d7b08e;
+    font-style: italic;
+}
+
+.hero-content > p:not(.subtitle) {
+    color: #e4e5df;
+    font-size: 14px;
+    line-height: 1.8;
+    max-width: 420px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #c77a45;
+    color: white;
+    padding: 15px 22px;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    background-color: #a95f34;
+    transform: translateY(-3px);
+}
+
+
+/* About Section */
+.about {
+    padding: 100px 10%;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+.about-image {
+    width: 50%;
+   
+}
+
+.about-image img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover; 
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+.about-image img:hover{
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.about-content {
+    width: 50%;
+}
+
+.about-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 43px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.about-content h2 span {
+    color: #526b4e;
+    font-style: italic;
+}
+
+.about-content > p:not(.subtitle) {
+    color: #777d72;
+    font-size: 13px;
+    line-height: 1.9;
+    margin-bottom: 25px;
+}
+
+.text-link {
+    color: #526b4e;
+    font-size: 12px;
+    font-weight: 700;
+    border-bottom: 1px solid #aab6a3;
+    padding-bottom: 5px;
+    transition: 0.3s;
+}
+
+.text-link:hover {
+    color: #c77a45;
+}
+
+
+/* Featured Dishes */
+.featured {
+    padding: 90px 10%;
+    background-color: #eeeee6;
+}
+
+.section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.section-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+}
+
+.section-heading h2 span {
+    color: #526b4e;
+    font-style: italic;
+}
+
+.food-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.food-card {
+    background-color: #fffdf8;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.food-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.food-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.food-info {
+    padding: 20px;
+}
+
+.food-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+.food-info p {
+    font-size: 11px;
+    color: #777d72;
+    margin-bottom: 12px;
+}
+
+.food-info h4 {
+    color: #c77a45;
+    font-size: 14px;
+}
+
+
+/* Special Offers */
+.special-offer {
+    background-color: #526b4e;
+    color: white;
+    padding: 75px 12%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.offer-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 43px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.offer-content h2 span {
+    color: #d7b08e;
+    font-style: italic;
+}
+
+.offer-content > p:not(.subtitle) {
+    color: #e0e7db;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.light-btn {
+    background-color: #fffdf8;
+    color: #2d4a37;
+}
+
+.light-btn:hover {
+    background-color: #a95f34;
+    color:white;
+}
+
+.offer-discount {
+    width: 160px;
+    height: 160px;
+    border: 1px solid white;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transform: rotate(8deg);
+}
+
+.offer-discount p {
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.offer-discount h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 45px;
+    color: #f0c5a2;
+}
+
+
+/* Footer */
+footer {
+    background-color: #202b23;
+    color: white;
+    padding: 45px 8% 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 35px;
+}
+
+.footer-logo h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+}
+
+.footer-logo span {
+    color: #d7b08e;
+}
+
+.footer-logo p {
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #aab4a5;
+    margin-top: 5px;
+}
+
+.footer-description {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    color: #d1d7cd;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #d1d7cd;
+    font-size: 11px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #e7b58e;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-top: 18px;
+    text-align: center;
+    color: #aab4a5;
+    font-size: 10px;
+}
+
+/* =========================
+   ABOUT PAGE
+========================= */
+
+/* About Hero */
+.about-hero {
+    min-height: 350px;
+    background:
+        linear-gradient(rgba(32, 40, 32, 0.65), rgba(32, 40, 32, 0.65)),
+        url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.about-hero-content {
+    max-width: 750px;
+    color: #fffdf8;
+}
+
+.about-hero .subtitle {
+    color: #d7b08e;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.about-hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 52px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.about-hero h1 span {
+    color: #d7b08e;
+}
+
+.about-hero-content > p:last-child {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #eeeee6;
+}
+
+/* Our Story Section */
+.story {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+    padding: 90px 10%;
+}
+
+.story-image img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.story-content .subtitle {
+    color: #c77a45;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.story-content h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 38px;
+    color: #26352b;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.story-content p {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 15px;
+}
+
+/* Our Values Section */
+.values {
+    background-color: #eeeee6;
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.values-heading {
+    max-width: 650px;
+    margin: 0 auto 45px;
+}
+
+.values-heading .subtitle {
+    color: #c77a45;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.values-heading h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 38px;
+    color: #26352b;
+    margin-bottom: 15px;
+}
+
+.values-heading p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.values-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.value-card {
+    background-color: #fffdf8;
+    padding: 35px 25px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.value-card h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    color: #26352b;
+    margin-bottom: 15px;
+}
+
+.value-card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* =========================
+   MENU PAGE
+========================= */
+
+/* Menu Hero */
+.menu-hero {
+    min-height: 350px;
+    background:
+        linear-gradient(rgba(32, 40, 32, 0.65), rgba(32, 40, 32, 0.65)),
+        url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.menu-hero-content {
+    max-width: 750px;
+    color: #fffdf8;
+}
+
+.menu-hero .subtitle {
+    color: #d7b08e;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.menu-hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 52px;
+    margin-bottom: 18px;
+}
+
+.menu-hero h1 span {
+    color: #d7b08e;
+}
+
+.menu-hero-content > p:last-child {
+    color: #eeeee6;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Menu Introduction */
+.menu-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: auto;
+    padding: 75px 20px 35px;
+}
+
+.menu-intro .subtitle,
+.menu-category .subtitle {
+    color: #c77a45;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.menu-intro h2,
+.menu-category h2 {
+    font-family: "Playfair Display", serif;
+    color: #26352b;
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.menu-intro > p:last-child {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Menu Sections */
+.menu-section {
+    padding: 45px 10% 65px;
+}
+
+.menu-category {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+/* Menu Grid */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Menu Item Card */
+.menu-item {
+    background-color: #fffdf8;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.menu-item-info {
+    padding: 22px;
+}
+
+.menu-item-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.menu-item-heading h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 19px;
+    color: #26352b;
+}
+
+.menu-item-heading span {
+    color: #c77a45;
+    font-size: 16px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.menu-item-info p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Desserts */
+.dessert-section {
+    background-color: #eeeee6;
+    padding-top: 65px;
+    padding-bottom: 80px;
+}
+/* =========================
+   OFFERS PAGE
+========================= */
+
+/* Offers Hero */
+.offers-hero {
+    min-height: 350px;
+    background:
+        linear-gradient(rgba(32, 40, 32, 0.65), rgba(32, 40, 32, 0.65)),
+        url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.offers-hero-content {
+    max-width: 750px;
+    color: #fffdf8;
+}
+
+.offers-hero .subtitle {
+    color: #d7b08e;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.offers-hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 52px;
+    margin-bottom: 18px;
+}
+
+.offers-hero h1 span {
+    color: #d7b08e;
+}
+
+.offers-hero-content > p:last-child {
+    color: #eeeee6;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Offers Introduction */
+.offers-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: auto;
+    padding: 75px 20px 45px;
+}
+
+.offers-intro .subtitle {
+    color: #c77a45;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.offers-intro h2 {
+    font-family: "Playfair Display", serif;
+    color: #26352b;
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.offers-intro > p:last-child {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Offers Section */
+.offers-section {
+    padding: 30px 10% 85px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+/* Offer Cards */
+.offer-card {
+    background-color: #fffdf8;
+    border-radius: 8px;
+    height: 500px;
+    overflow: hidden;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.offer-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* Offer Image */
+.offer-image {
+    position: relative;
+    height: 220px;
+}
+
+.offer-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.offer-label {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #26352b;
+    color: #fffdf8;
+    padding: 8px 13px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 3px;
+}
+
+/* Offer Content */
+.offer-content {
+    padding: 25px;
+}
+
+.offer-discount {
+    color: #c77a45;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.offer-content h3 {
+    font-family: "Playfair Display", serif;
+    color: #26352b;
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.offer-content > p:not(.offer-discount):not(.offer-validity) {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.offer-validity {
+    color: #1e5118;
+    font-size: 13px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+/* Offer Button */
+.offer-btn {
+    display: inline-block;
+    background-color: #26352b;
+    color: #fffdf8;
+    padding: 11px 20px;
+    border-radius: 4px;
+    font-size: 13px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.offer-btn:hover {
+    background-color: #526b4e;
+}
+
+/* Offer Banner */
+.offer-banner {
+    background:
+        linear-gradient(rgba(38, 53, 43, 0.85), rgba(38, 53, 43, 0.85)),
+        url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 85px 20px;
+    color: #fffdf8;
+}
+
+.offer-banner-content {
+    max-width: 750px;
+    margin: auto;
+}
+
+.offer-banner .subtitle {
+    color: #d7b08e;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.offer-banner h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 36px;
+    line-height: 1.3;
+    margin-bottom: 18px;
+}
+
+.offer-banner-content > p:not(.subtitle) {
+    color: #eeeee6;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 28px;
+}
+
+.banner-btn {
+    display: inline-block;
+    background-color: #c77a45;
+    color: #fffdf8;
+    padding: 13px 25px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.banner-btn:hover {
+    background-color: #a95f32;
+}
+
+/* Terms and Conditions */
+.offer-terms {
+    padding: 45px 10%;
+    background-color: #eeeee6;
+}
+
+.offer-terms h3 {
+    font-family: "Playfair Display", serif;
+    color: #26352b;
+    font-size: 23px;
+    margin-bottom: 18px;
+}
+
+.offer-terms ul {
+    padding-left: 20px;
+}
+
+.offer-terms li {
+    color: #666;
+    font-size: 14px;
+    line-height: 2;
+}
+
+/* =========================
+   CONTACT PAGE
+========================= */
+
+/* Contact Hero */
+.contact-hero {
+    min-height: 350px;
+    background:
+        linear-gradient(rgba(32, 40, 32, 0.65), rgba(32, 40, 32, 0.65)),
+        url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.contact-hero-content {
+    max-width: 750px;
+    color: #fffdf8;
+}
+
+.contact-hero .subtitle {
+    color: #d7b08e;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.contact-hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 52px;
+    margin-bottom: 18px;
+}
+
+.contact-hero h1 span {
+    color: #d7b08e;
+}
+
+.contact-hero-content > p:last-child {
+    color: #eeeee6;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Contact Introduction */
+.contact-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: auto;
+    padding: 75px 20px 45px;
+}
+
+.contact-intro .subtitle {
+    color: #c77a45;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.contact-intro h2 {
+    font-family: "Playfair Display", serif;
+    color: #26352b;
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.contact-intro > p:last-child {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Main Contact Section */
+.contact-section {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 50px;
+    padding: 40px 10% 85px;
+    align-items: start;
+}
+
+/* Contact Information */
+.contact-info {
+    padding: 20px 0;
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.contact-icon {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    background-color: #eeeee6;
+    color: #526b4e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.contact-info-item h3,
+.opening-hours h3 {
+    font-family: "Playfair Display", serif;
+    color: #26352b;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.contact-info-item p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* Opening Hours */
+.opening-hours {
+    background-color: #eeeee6;
+    padding: 25px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.hours-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid #d9d9ce;
+    color: #555;
+    font-size: 13px;
+}
+
+.hours-row:last-child {
+    border-bottom: none;
+}
+
+/* Contact Form Container */
+.contact-form-container {
+    background-color: #fffdf8;
+    padding: 35px;
+    border-radius: 8px;
+    box-shadow: 0 5px 22px rgba(0, 0, 0, 0.07);
+}
+
+.contact-form-container h2 {
+    font-family: "Playfair Display", serif;
+    color: #26352b;
+    font-size: 29px;
+    margin-bottom: 10px;
+}
+
+.contact-form-container > p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 25px;
+    line-height: 1.7;
+}
+
+/* Form Fields */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: #26352b;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 9px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #d9d9ce;
+    border-radius: 4px;
+    background-color: #f7f5ef;
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #526b4e;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Submit Button */
+.contact-submit-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #26352b;
+    color: #fffdf8;
+    border: none;
+    border-radius: 4px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-submit-btn:hover {
+    background-color: #526b4e;
+}
+
+/* Location Section */
+.location-section {
+    background:
+        linear-gradient(rgba(38, 53, 43, 0.85), rgba(38, 53, 43, 0.85)),
+        url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 80px 20px;
+    color: #fffdf8;
+}
+
+.location-content {
+    max-width: 650px;
+    margin: auto;
+}
+
+.location-content .subtitle {
+    color: #d7b08e;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.location-content h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.location-content > p:not(.subtitle) {
+    color: #eeeee6;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.location-btn {
+    display: inline-block;
+    background-color: #c77a45;
+    color: #fffdf8;
+    padding: 13px 25px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.location-btn:hover {
+    background-color: #a95f32;
+}
